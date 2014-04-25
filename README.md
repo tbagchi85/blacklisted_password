@@ -17,6 +17,7 @@ Or install it yourself as:
     $ gem install blacklisted_password
 
 I am still working on that Gem:-
+
     So Till the Generator file I create, please follow the following steps:-
 
     From your Root of your application:-
