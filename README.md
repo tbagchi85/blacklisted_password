@@ -16,6 +16,34 @@ Or install it yourself as:
 
     $ gem install blacklisted_password
 
+I am still working on that Gem:-
+    So Till the Generator file I create, please follow the following steps:-
+
+    From your Root of your application:-
+
+    $ touch config/blacklist_password.yml
+
+    In the blacklist_password.yml file you have to write few blacklisted words
+
+     $ ---
+     $ demo
+     $ abc
+     $ black
+
+     $ touch config/initializer/blacklisted_password.rb
+
+      Into initializer file
+
+     $ BLACKLISTED_PASSWORD = Rails.root.join("config/blacklist_password.yml")
+
+
+
+     Then in you Model where you want to validate password :-
+
+     $ require "blacklisted_password"
+     $ BLACKLISTED_PASSWORD = Rails.root.join("config/blacklist_password.yml")
+     $ validate :blacklist_password
+
 ## Usage
 
 TODO: Write usage instructions here

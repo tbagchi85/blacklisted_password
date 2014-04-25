@@ -1,7 +1,7 @@
 require "blacklisted_password/version"
 
 module BlacklistedPassword
-  BLACKLISTED_PASSWORD = Rails.root.join("config/blacklist_password.yml")
+
   def blacklist_password  #This is for blacklisting password
     if password.present?
       array = YAML.load_file(BLACKLISTED_PASSWORD).split(' ')
