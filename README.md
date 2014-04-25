@@ -1,6 +1,6 @@
 # BlacklistedPassword
 
-TODO: Write a gem description
+This is a Password black listing gem where you can add Blacklisted words in YAML file.
 
 ## Installation
 
@@ -16,42 +16,21 @@ Or install it yourself as:
 
     $ gem install blacklisted_password
 
-I am still working on that Gem:-
+Then generate required files as follow:-
 
-    So Till the Generator file I create, please follow the following steps:-
-
-    From your Root of your application:-
-
-    $ touch config/blacklist_password.yml
-
-    In the blacklist_password.yml file you have to write few blacklisted words
-
-     $ ---
-     $ demo
-     $ abc
-     $ black
-
-     $ touch config/initializer/blacklisted_password.rb
-
-      Into initializer file
-
-     $ BLACKLISTED_PASSWORD = Rails.root.join("config/blacklist_password.yml")
-
-
-
-     Then in you Model where you want to validate password :-
-
-     $ require "blacklisted_password"
-     $ BLACKLISTED_PASSWORD = Rails.root.join("config/blacklist_password.yml")
-     $ validate :blacklist_password
+    $ rails g blacklisted:install
 
 ## Usage
 
-TODO: Write usage instructions here
+    In your Model just add :--
+
+    require 'blacklisted_password'
+
+    validates :password, blacklist: true
 
 ## Contributing
 
-1. Fork it
+1. git clone https://github.com/tbagchi85/blacklisted_password.git
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
