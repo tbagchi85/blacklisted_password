@@ -1,4 +1,4 @@
-# BlacklistedPassword
+# BlacklistedPassword  [![Code Climate](https://codeclimate.com/github/tbagchi85/blacklisted_password.png)](https://codeclimate.com/github/tbagchi85/blacklisted_password)
 
 This is a Password black listing gem where you can add Blacklisted words in YAML file.
 
