@@ -27,10 +27,14 @@ class BlacklistValidator < ActiveModel::EachValidator
   end
 
   def email_spliting(email) #This is for possible email splitting
-    character_to_split = ['_','+','@','.']
-    character_to_split.each do |char|
-      email = email.split(char).join("^")
+    if email
+      character_to_split = ['_','+','@','.']
+      character_to_split.each do |char|
+        email = email.split(char).join("^")
+      end
+      email.split('^')
+    else
+      []
     end
-    email.split('^')
   end
 end

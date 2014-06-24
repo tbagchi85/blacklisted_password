@@ -30,7 +30,7 @@ Then generate required files as follow:-
 
 ## Contributing
 
-1. git clone https://github.com/tbagchi85/blacklisted_password.git
+1. git clone `https://github.com/tbagchi85/blacklisted_password.git`
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
